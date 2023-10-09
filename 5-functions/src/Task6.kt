@@ -15,5 +15,25 @@ Boolean (доступно ему это авто или нет)
 
 
 fun main() {
+    print("Enter the name of the selected car: ")
+    val selectedCar: String = readln().toString()
+    print("Enter your age: ")
+    val age: Int = readln().toInt()
+    print("Enter your driving experience in the category B:")
+    val drivengExperience: Int = readln().toInt()
+    if(getCheckData(selectedCar, age, drivengExperience))
+        println("$selectedCar - this car is available to you.")
+    else
+        println("$selectedCar - this car is not available to you.")
+
+}
+
+fun getCheckData(selectedCar: String, age: Int, drivingExperiens: Int): Boolean {
+            if (selectedCar.contains("BMW") || selectedCar.contains("Audi"))
+                    return age >= 26 && drivingExperiens >= 6
+            else if (age >= 21)
+                return drivingExperiens >= 2
+            else
+                return false
 
 }
