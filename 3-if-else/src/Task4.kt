@@ -13,5 +13,9 @@
 */
 
 fun main() {
+    print("Enter e-mail: ")
+    val email: String = readln().toString()
 
+    if(!(email.contains('@') && email.contains('.')))
+        println("Your e-mail is not correct!")
 }

@@ -13,5 +13,19 @@
 */
 
 fun main() {
+    print("Enter your age: ")
+    val age: Int = readln().toInt()
+    print("Enter your driving experience category B: ")
+    val experienceB: Int = readln().toInt()
+
+    if(age >= 21 && experienceB >= 2) {
+        println("Вам доступны все обычные автомобили")
+        if (age >= 26 && experienceB >= 6)
+            println("а так же автомобили Audi & BMW")
+    }
+    else {
+        println("Ваш возраст или стаж вождения не достаточен для получения авто в каршеринг")
+        println("Приносим извенения за доставленные неудобства")
+    }
 
 }

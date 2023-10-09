@@ -4,5 +4,14 @@
 */
 
 fun main() {
+    print("Enter the integer number (1-5): ")
+    val value: Int = readln().toInt()
 
+    when (value) {
+        1 -> println("one")
+        2 -> println("two")
+        3 -> println("three")
+        4 -> println("four")
+        5 -> println("five")
+    }
 }
