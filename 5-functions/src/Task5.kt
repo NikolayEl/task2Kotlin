@@ -21,12 +21,11 @@ fun main() {
     println(getAnswerCarSharing(age, drivingExpirience))
 }
 
-fun getAnswerCarSharing(age: Int, drivingExpirience: Int): String
-{
+fun getAnswerCarSharing(age: Int, drivingExpirience: Int): String {
     return (
-            if(age > 26 && drivingExpirience > 6)
+            if (age > 26 && drivingExpirience > 6)
                 "All cars are available to you, including: Audi, BMW."
-            else if(age > 21 && drivingExpirience > 2)
+            else if (age > 21 && drivingExpirience > 2)
                 "All cars are available to you, except: Audi, BMW."
             else
                 "You are not of sufficient age or driving experience to " +
