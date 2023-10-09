@@ -7,5 +7,19 @@
 */
 
 fun main() {
+    print("Enter number: ")
+    val number: Int = readln().toInt()
 
+    println("Number $number - ${getTextRepresentationOfTheNumber(number)}")
+}
+
+fun getTextRepresentationOfTheNumber(number: Int): String {
+    when (number) {
+        1 -> return "One"
+        2 -> return "Two"
+        3 -> return "Three"
+        4 -> return "Four"
+        5 -> return "Five"
+        else -> return "The number is gone beyond imagination"
+    }
 }

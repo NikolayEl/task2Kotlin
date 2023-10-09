@@ -6,5 +6,19 @@
 */
 
 fun main() {
+    print("Enter first number: ")
+    val a: Int = readln().toInt()
+    print("Enter second number: ")
+    val b: Int = readln().toInt()
 
+    println(getMaxNumberResult(a, b))
+}
+
+fun getMaxNumberResult(firstNumber: Int, secondNumber: Int): String {
+    return (if (firstNumber > secondNumber)
+        "The first number is max"
+    else if (secondNumber > firstNumber)
+        "The second number is max"
+    else
+        "numbers are equal")
 }

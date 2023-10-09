@@ -15,5 +15,13 @@
 */
 
 fun main() {
+    print("Enter your e-mail:")
+    val eMail: String = readln().toString()
+    if(!getCheckingMail(eMail))
+        println("Your e-mail is not correct! Please try again letter!")
+}
 
+fun getCheckingMail(eMail: String): Boolean
+{
+    return (eMail.contains('@') && eMail.contains('.'))
 }
