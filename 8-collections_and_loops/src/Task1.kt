@@ -1,3 +1,5 @@
+import kotlin.math.roundToInt
+
 /*
 Дан класс, описывающий сотрудника:
 data class Employee(val name: String, val age: Int)
@@ -22,10 +24,8 @@ fun main() {
 
 fun getAverageAge(listUser: List<Employee>): Double {
     var sum: Int = 0
-    var count: Int = 0
     for (i in listUser) {
         sum += i.age
-        count++
     }
-    return sum.toDouble() / count
+    return ((sum.toDouble() / listUser.size) * 10).roundToInt() / 10.0
 }

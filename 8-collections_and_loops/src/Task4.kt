@@ -15,14 +15,14 @@ fun main() {
     val employee2 = Employee("Olga", 37)
     val employee3 = Employee("Vlad", 11)
 
-    val homeWork: Department = Department("Home Office", listOf(employee1, employee2, employee3))
+    val department: Department = Department("Home Office", listOf(employee1, employee2, employee3))
 
-    println("Average age of employees: ${getAverageAgeEmloyees(homeWork)}")
+    println("Average age of employees: ${getAverageAgeEmloyees(department)}")
 }
 
-fun getAverageAgeEmloyees(homeWork: Department): Double {
+fun getAverageAgeEmloyees(departament: Department): Double {
     var sum: Int = 0
-    for (emloyee in homeWork.employees)
+    for (emloyee in departament.employees)
         sum += emloyee.age
-    return ((sum.toDouble() / homeWork.employees.size) * 10).roundToInt() / 10.0
+    return ((sum.toDouble() / departament.employees.size) * 10).roundToInt() / 10.0
 }

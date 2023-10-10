@@ -21,7 +21,7 @@ fun availableCarsForUser(allCars: List<Car>, user: User): List<Car> {
 
 //проверка работы функции
 fun main() {
-    val user = User("Kirill", 24, 3)
+    val user = User("Kirill", 26, 6)
     val car1 = Car("BMW", "x5", 15.3)
     val car2 = Car("Kia", "Rio", 10.1)
     val car3 = Car("Renault", "Capture", 10.5)
