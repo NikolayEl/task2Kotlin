@@ -20,7 +20,7 @@ fun main() {
 
     val allCars: List<Car> = listOf(car1, car2, car3, car4, car5, car6)
 
-    val user = Employee("Olga", 25, 6)
+    val user = Employee("Olga", 20, 4)
 
     println("List cars available to you:")
     if (dataCheking(allCars, user).size > 0) {
@@ -37,7 +37,8 @@ fun dataCheking(allCars: List<Car>, user: Employee): List<Car> {
 
     for (car in allCars) {
         if (veryExperiencedDriver || (experiencedDriver && !car.brand.contains("BMW")
-                    && !car.brand.contains("Audi")))
+                    && !car.brand.contains("Audi"))
+        )
             availableCar.add(car)
     }
     return availableCar

@@ -12,26 +12,27 @@ fun averageAgeOfEmployees(company: Company): Int
 Для этой задачи есть видео с разбором.
 */
 
-fun totalNumberOfEmployees(company: Company): Int{
+fun totalNumberOfEmployees(company: Company): Int {
     var counter = 0
 
-    for(department in company.departments)
+    for (department in company.departments)
         counter += department.employees.size
 
     return counter
 }
 
-fun averageAgeOfEmployees(company: Company): Int{
+fun averageAgeOfEmployees(company: Company): Int {
     var counter = 0
     var sumOfAge = 0
 
-    for(department in company.departments)
-        for(employee in department.employees) {
+    for (department in company.departments)
+        for (employee in department.employees) {
             counter++
             sumOfAge += employee.age
         }
 
-    return sumOfAge/counter
+
+    return sumOfAge / counter
 }
 
 
