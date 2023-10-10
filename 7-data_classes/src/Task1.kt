@@ -33,14 +33,14 @@ fun main() {
 }
 
 fun complianceChekRenter(renter: Renter, car: Car): Boolean {
-    if (renter.age >= 26 && renter.drivingExperience >= 6)
-        return true
+    return if (renter.age >= 26 && renter.drivingExperience >= 6)
+        true
     else if (renter.age >= 21 && renter.drivingExperience >= 2 &&
         (!car.brand.contains("BMW") && !car.brand.contains("Audi"))
     )
-        return true
+        true
     else
-        return false
+        false
 }
 
 data class Renter(val name: String, val age: Int, val drivingExperience: Int)
