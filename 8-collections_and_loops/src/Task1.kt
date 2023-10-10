@@ -20,11 +20,10 @@ fun main() {
 
 }
 
-fun getAverageAge(listUser: List<Employee>): Double
-{
+fun getAverageAge(listUser: List<Employee>): Double {
     var sum: Int = 0
     var count: Int = 0
-    for( i in listUser){
+    for (i in listUser) {
         sum += i.age
         count++
     }
