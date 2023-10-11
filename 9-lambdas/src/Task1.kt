@@ -14,9 +14,9 @@ fun main() {
     val user2 = User("Olga", 37)
     val user3 = User("Vladislav", 11)
 
-    val users = mutableListOf(user1, user2, user3)
+    val users = listOf(user1, user2, user3)
 
-    println(convertUsersToString(users) { it -> "Name: ${it.name}, age: ${it.age}" })
+    println(convertUsersToString(users) { "Name: ${it.name}, age: ${it.age}" })
 }
 
 fun convertUsersToString(users: List<User>, conversion: (User) -> String): List<String> {

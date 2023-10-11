@@ -17,7 +17,7 @@ fun main() {
 
     val users: List<User> = listOf(user1, user2, user3)
 
-    println("Users over 18: ${elementsCountCondition(users) { it -> it.age > 18 }}")
+    println("Users over 18: ${elementsCountCondition(users) { it.age > 18 }}")
 }
 
 fun elementsCountCondition(users: List<User>, condition: (User) -> Boolean): Int {
