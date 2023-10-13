@@ -8,5 +8,26 @@
 */
 
 fun main() {
+    val rectangle1 = Rectangle(10.0, 10.0)
 
+    println("Area rectangle: ${rectangle1.getArea()}")
+    println("Perimetr rectangle: ${rectangle1.getPerimetr()}")
+    println("Is this rectangle a square?: ${rectangle1.examinationIsSquare()}")
+}
+
+class Rectangle(
+    val width: Double,
+    val height: Double
+) {
+    fun getArea(): Double {
+        return width * height
+    }
+
+    fun getPerimetr(): Double {
+        return (width + height) * 2
+    }
+
+    fun examinationIsSquare(): Boolean{
+        return width == height
+    }
 }
