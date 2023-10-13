@@ -5,5 +5,20 @@
 */
 
 fun main() {
+    val circle1 = Round(10.0)
 
+    println("Area of a circle: ${circle1.getArea()}")
+    println("Lenght of a circle: ${circle1.getLenght()}")
+
+
+}
+
+class Round(val radius: Double) {
+    fun getArea(): Double {
+        return Math.PI * radius * radius
+    }
+
+    fun getLenght(): Double {
+        return 2 * Math.PI * radius
+    }
 }

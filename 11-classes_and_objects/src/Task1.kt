@@ -27,7 +27,7 @@ class Rectangle(
         return (width + height) * 2
     }
 
-    fun examinationIsSquare(): Boolean{
+    fun examinationIsSquare(): Boolean {
         return width == height
     }
 }
