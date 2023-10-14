@@ -7,3 +7,4 @@ moveDown(step: Int), moveUp(step: Int).
 
 Для этой задачи есть видео с разбором.
 */
+

@@ -4,3 +4,7 @@
 
 Для этой задачи есть видео с разбором.
 */
+fun main() {
+    val animal = Animal("Horse", 5, 5)
+    animal.printAnimal()
+}
