@@ -19,15 +19,28 @@ fun findEmployeeBySalary(employees: List<SomeEmployee>, age: Int): SomeEmployee?
 */
 
 fun main() {
+    val employee1 = SomeEmployee("Nikolay", 45000)
+    val employee2 = SomeEmployee("Olga", 25000)
+    val employee3 = SomeEmployee("Aleksey", 45000)
 
+    val employees = listOf<SomeEmployee>(employee1, employee2, employee3)
+    findEmployeeBySalary(employees){it.salary < 24000}?.callToClient("Oleg")
 }
 
 class SomeEmployee(
-        val name: String,
-        val salary: Int
+    val name: String,
+    val salary: Int
 ) {
 
     fun callToClient(clientName: String) {
         println("Сотрудник ${name}: звоню клиенту $clientName")
     }
+}
+
+fun findEmployeeBySalary(employees: List<SomeEmployee>, condition: (SomeEmployee) -> Boolean): SomeEmployee? {
+    var someEmployeeSalary: MutableList<SomeEmployee>? = mutableListOf<SomeEmployee>()
+    for (employee in employees)
+        if (condition(employee))
+            return employee
+    return null
 }
