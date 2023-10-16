@@ -1,4 +1,3 @@
-
 /*
 Переделайте функцию findEmployeeBySalary  из задачи по null safety таким образом, чтобы ее возвращаемый тип
 был SomeEmployee,а не SomeEmployee?.
@@ -17,10 +16,10 @@ fun main() {
     val employee3 = SomeEmployee("Aleksey", 45000)
 
     val employees = listOf<SomeEmployee>(employee1, employee2, employee3)
-
+    //employees.forEach({print("${it.name} ")})
     try {
         findEmployeeBySalary(employees) { it.salary < 24000 }?.callToClient("Oleg")
-    } catch (e: Exception){
+    } catch (e: Exception) {
         println(e.message)
     }
 }
